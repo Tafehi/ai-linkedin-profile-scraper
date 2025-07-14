@@ -2,14 +2,14 @@ import os
 from dotenv import load_dotenv
 
 
-from utils.linkedin import LinkedInProfileScraper 
+from utils.linkedin import LinkedInProfileScraper
 
 
 import streamlit as st
 
 
 if __name__ == "__main__":
-    
+
     print("Starting LinkedIn profile scraping...")
     scraper = LinkedInProfileScraper(
         linkedin_url="https://www.linkedin.com/in/ehsan-tafehi/", mock=True

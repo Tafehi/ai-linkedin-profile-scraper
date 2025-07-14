@@ -50,4 +50,3 @@ class LinkedInProfileScraper:
         except Exception as e:
             print(f"Error scraping LinkedIn profile: {e}")
             return None
-
