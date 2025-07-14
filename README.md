@@ -6,15 +6,15 @@ This project is an AI-powered agent that scrapes LinkedIn profiles using the `Ol
 
 ---
 ## 🚀 Features
-🔍 Scrapes LinkedIn profiles using the Scrapin.io API
-🧠 Uses Gemma (via Ollama) or GPT-4o-mini (via OpenAI)
-🔗 Built with LangChain for agent orchestration
-🌐 Uses Tavily API as a web search tool
-🧠 AI agent (lookup.py) searches LinkedIn using GPT-4o-mini
-💾 Fetches cached data from GitHub Gist for specific users (e.g., "Ehsan Tafehi") to reduce costs
-🖥️ Interactive Streamlit UI
-💰 Only the paid Scrapin.io API can fetch live data
-👉 Scrapin Pricing
+. 🔍 Scrapes LinkedIn profiles using the Scrapin.io API
+. 🧠 Uses Gemma (via Ollama) or GPT-4o-mini (via OpenAI)
+. 🔗 Built with LangChain for agent orchestration
+. 🌐 Uses Tavily API as a web search tool
+. 🧠 AI agent (lookup.py) searches LinkedIn using GPT-4o-mini
+. 💾 Fetches cached data from GitHub Gist for specific users (e.g., "Ehsan Tafehi") to reduce costs
+. 🖥️ Interactive Streamlit UI
+. 💰 Only the paid Scrapin.io API can fetch live data
+. 👉 Scrapin Pricing
 
 ---
 
