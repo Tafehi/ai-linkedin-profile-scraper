@@ -1,7 +1,8 @@
 import os
-import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# import sys
+
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from dotenv import load_dotenv
 from langchain import hub
 from langchain_core.prompts import PromptTemplate
@@ -19,12 +20,14 @@ class LookUp:
     def __init__(self, name: str):
         load_dotenv()
         self._name = name
+        self._llm_model = os.getenv("LLM_MODEL")
+        self._openai_api_key = os.getenv("OPENAI_API_KEY")
 
     def linkedin_lookup(self) -> str:
         llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model=self._llm_model,
             temperature=0,
-            openai_api_key=os.getenv("OPENAI_API_KEY"),
+            openai_api_key=self._openai_api_key,
         )
         template = """given the full name {name_of_person} I want you to provide me the linkedin profile page. Your answer should contain only the URL."""
         prompt_template = PromptTemplate(
@@ -55,9 +58,3 @@ class LookUp:
         linkedin_url = result.get("output", "")
         print(f"LinkedIn URL for {self._name}: {linkedin_url}")
         return linkedin_url
-
-
-if __name__ == "__main__":
-    name = "ehsan tafehi"
-
-    linkedin_url = LookUp(name).linkedin_lookup()

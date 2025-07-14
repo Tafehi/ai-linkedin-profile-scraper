@@ -35,7 +35,7 @@ class LinkedInProfileScraper:
                 print(f"Response status code: {response.status_code}")
                 if response.status_code == 200:
                     print("Profile scraped successfully.")
-                    print(response.json())
+                    # print(response.json())
                     return response.json()
                 # elif response.status_code == 404 or response.status_code == 401:
                 #   return "To fetch the LinkedIn profile, please provide a proper API Key. The API Key must be set in the .env file and must be from paid plan."
@@ -44,7 +44,7 @@ class LinkedInProfileScraper:
 
                 print(f"Response status code: {response.status_code}")
                 print("Profile scraped successfully.")
-                print(response.json())
+                # print(response.json())
                 return response.json()
 
         except Exception as e:
