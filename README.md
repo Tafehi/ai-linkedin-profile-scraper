@@ -1,6 +1,6 @@
 # LinkedIn Profile Scraper AI Agent
 
-This project is an AI-powered agent that scrapes LinkedIn profiles using the [Olama framework integrated with LangChain, leveraging Google's **Gemma** model. It uses [Scrapin.io](https://www.scrapinr fetching LinkedIn profile information.
+This project is an AI-powered agent that scrapes LinkedIn profiles using the `Olama framework` integrated with LangChain, leveraging Google's `**Gemma**` model. It uses [Scrapin.io](https://www.scrapin.io/) fetching LinkedIn profile information.
 
 ---
 
