@@ -13,7 +13,7 @@ if __name__ == "__main__":
     
     print("Starting LinkedIn profile scraping...")
     scraper = LinkedInProfileScraper(
-        linkedin_url="https://www.linkedin.com/in/ehsan-tafehi/", mock=False
+        linkedin_url="https://www.linkedin.com/in/ehsan-tafehi/", mock=True
     )
     linked_data = scraper.scrape_linkedin_profile()
     print(linked_data)
