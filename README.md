@@ -18,7 +18,7 @@ This project is an AI-powered agent that scrapes LinkedIn profiles using the [Ol
 - Python 3.10+
 - Ollama installed and running
 - LangChain
-- A [Scrapin.io](https://www.scrapin---
+- A [Scrapin.io](https://www.scrapin.io/)
 
 ## 📦 Installation
 1. **Clone the repository**
