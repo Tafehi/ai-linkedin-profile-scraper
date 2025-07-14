@@ -4,6 +4,7 @@ from langchain_tavily import TavilySearch
 
 load_dotenv()
 
+
 def get_profile_url(name: str) -> str:
     """Get LinkedIn profile URL for a given name."""
     tavily = TavilySearch(api_key=os.getenv("TAVILY_API_KEY"))
