@@ -1,6 +1,6 @@
 
 ## 🔍 LinkedIn Profile Scraper AI Agent
-This project is an AI-powered LinkedIn profile summarizer built using the Openai framework, LangChain, and Streamlit. It leverages Google's Gemma model (via Openai) or OpenAI's GPT-4o-mini for efficient and cost-effective reasoning. The agent uses Scrapin.io to fetch LinkedIn profile data and intelligently decides whether to use live scraping or cached data from GitHub Gist.
+This project is an AI-powered LinkedIn profile summarizer built using the Openai framework, LangChain, and Streamlit. It leverages Google's Gemma model (via Ollama) or OpenAI's GPT-4o-mini for efficient and cost-effective reasoning. The agent uses Scrapin.io to fetch LinkedIn profile data and intelligently decides whether to use live scraping or cached data from GitHub Gist.
 
 This project is an AI-powered agent that scrapes LinkedIn profiles using the `gpt-4o-mini` model integrated with LangChain, leveraging from Google's `Openai`. It uses [Scrapin.io](https://www.scrapin.io/) fetching LinkedIn profile information.
 
