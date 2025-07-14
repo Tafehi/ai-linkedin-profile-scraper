@@ -1,8 +1,8 @@
 
 ## 🔍 LinkedIn Profile Scraper AI Agent
-This project is an AI-powered LinkedIn profile summarizer built using the Ollama framework, LangChain, and Streamlit. It leverages Google's Gemma model (via Ollama) or OpenAI's GPT-4o-mini for efficient and cost-effective reasoning. The agent uses Scrapin.io to fetch LinkedIn profile data and intelligently decides whether to use live scraping or cached data from GitHub Gist.
+This project is an AI-powered LinkedIn profile summarizer built using the Openai framework, LangChain, and Streamlit. It leverages Google's Gemma model (via Openai) or OpenAI's GPT-4o-mini for efficient and cost-effective reasoning. The agent uses Scrapin.io to fetch LinkedIn profile data and intelligently decides whether to use live scraping or cached data from GitHub Gist.
 
-This project is an AI-powered agent that scrapes LinkedIn profiles using the `Olama framework` integrated with LangChain, leveraging Google's `Gemma` model. It uses [Scrapin.io](https://www.scrapin.io/) fetching LinkedIn profile information.
+This project is an AI-powered agent that scrapes LinkedIn profiles using the `gpt-4o-mini` model integrated with LangChain, leveraging from Google's `Openai`. It uses [Scrapin.io](https://www.scrapin.io/) fetching LinkedIn profile information.
 
 ---
 ## 🚀 Features
@@ -20,7 +20,7 @@ This project is an AI-powered agent that scrapes LinkedIn profiles using the `Ol
 
 ## 🛠️ Requirements
 Python 3.10+
-Ollama installed and running (for Gemma)
+Openai installed and running (for gpt-4o-mini)
 LangChain
 Streamlit
 A Scrapin.io API key
@@ -87,6 +87,5 @@ This logic ensures cost-efficiency and low latency.
 
 ## 📄 Notes
 You must have a valid Scrapin.io account and API key.
-Ensure Ollama is running locally with the Gemma model pulled.
 The project defaults to GPT-4o-mini for cost and speed.
 This project is for educational and research purposes. Always respect LinkedIn’s terms of service.
