@@ -10,7 +10,8 @@ This project is an AI-powered agent that scrapes LinkedIn profiles using the `Ol
 - 🧠 Uses **Gemma** model from Google via **Ollama**
 - 🔗 Built with **LangChain** for agent orchestration
 - 🔐 Requires a valid Scrapin.io API key
-
+- 💰 Only the paid API can fetch the data.
+     For more info click on [scrapin pricing](https://app.scrapin.io/pricing)
 ---
 
 ## 🛠️ Requirements

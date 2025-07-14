@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
+
 # from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Bedrock
@@ -13,7 +14,7 @@ PersonName = "Elon Musk"
 if __name__ == "__main__":
     print("Hello LangChain!")
 
-        # Load environment variables from .env file
+    # Load environment variables from .env file
     # load_dotenv()
 
     # # Fetch credentials from environment
