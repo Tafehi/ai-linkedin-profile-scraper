@@ -2,64 +2,46 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
-
-# from langchain_openai import ChatOpenAI
+from utils.linkedin import LinkedInProfileScraper 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Bedrock
 import boto3
 import streamlit as st
 
-PersonName = "Elon Musk"
 
 if __name__ == "__main__":
-    print("Hello LangChain!")
+    
+    print("Starting LinkedIn profile scraping...")
+    scraper = LinkedInProfileScraper(
+        linkedin_url="https://www.linkedin.com/in/ehsan-tafehi/", mock=False
+    )
+    linked_data = scraper.scrape_linkedin_profile()
+    print(linked_data)
 
-    # Load environment variables from .env file
-    # load_dotenv()
+    # Simulate a request to the LinkedIn profile (this won't work without proper headers and authentication)
 
-    # # Fetch credentials from environment
-    # aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
-    # aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
-    # aws_session_token = os.getenv("AWS_SESSION_TOKEN")  # Optional
-    # aws_region = os.getenv("AWS_REGION", "eu-west-1")  # Default to 'eu-west-1' if not set
+    print("Starting LinkedIn profile scraping...")
 
-    # Optional: Set up a boto3 client for Bedrock
-    # Create a boto3 client using the loaded credentials
-    # bedrock_client = boto3.client(
-    #     "bedrock-runtime",
-    #     region_name=aws_region,
-    #     aws_access_key_id=aws_access_key,
-    #     aws_secret_access_key=aws_secret_key,
-    #     aws_session_token=aws_session_token  # Only include if not None
-    # )
-
-    # Initialize the Bedrock LLM with Titan Text G1 - Lite
-    # llm = Bedrock(
-    #     model_id="amazon.titan-text-lite-v1",
-    #     client=bedrock_client,
-    #     model_kwargs={
-    #         "temperature": 0.2,
-    #         "maxTokenCount": 512,
-    #         "topP": 0.9,
-    #         "stopSequences": [],
-    #     },
-    # )
     llm = OllamaLLM(
         model="gemma:latest",
-        temperature=0.2,
+        temperature=0.4,
     )
     # Define a prompt template for generating summaries
-    summary_template = """given the infomation about a person {person} from I want you to create:
+    summary_template = """Give the linkedin profile information about a person {information} from I want you to create:
     1. A short summary of the person
-    2. intresting facts about the person
+    2. two interesting facts about the person
+    3. the 3 top skills of the person which is highly on demand
+    4. the last two company experiences of the person
+    5. A list of the person's education
+    6. A list of the person's languages
     """
     summary_prompt = PromptTemplate(
-        input_variables=["person"],
+        input_variables=["information"],
         template=summary_template,
     )
 
     chain = summary_prompt | llm | StrOutputParser()
-    response = chain.invoke(input={"person": {PersonName}})
+    response = chain.invoke(input={"information": {linked_data}})
     print(response)
 
 # # Streamlit UI
